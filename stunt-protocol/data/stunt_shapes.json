@@ -1,0 +1,122 @@
+[
+  {
+    "id": "stunt-001",
+    "shape": "Buy the thing nobody thought was for sale, then sell it back.",
+    "mechanic": "Purchase an unexpected asset, create scarcity, resell.",
+    "why_covered": "Subverts ownership expectations."
+  },
+  {
+    "id": "stunt-002",
+    "shape": "Turn a limitation into the entire product.",
+    "mechanic": "Take a constraint and make it the feature.",
+    "why_covered": "Reveals product capability through extreme demonstration."
+  },
+  {
+    "id": "stunt-003",
+    "shape": "Do publicly what others do in private.",
+    "mechanic": "Make a private industry practice visible.",
+    "why_covered": "Creates controversy + transparency narrative."
+  },
+  {
+    "id": "stunt-004",
+    "shape": "Set an impossible deadline, then hit it.",
+    "mechanic": "Public commitment to extreme timeline, deliver.",
+    "why_covered": "Human interest + proof of execution."
+  },
+  {
+    "id": "stunt-005",
+    "shape": "Give away the thing competitors charge for.",
+    "mechanic": "Identify revenue source, make it free.",
+    "why_covered": "Disrupts pricing expectations."
+  },
+  {
+    "id": "stunt-006",
+    "shape": "Hire the person nobody else would.",
+    "mechanic": "Find unconventional talent, make them the face.",
+    "why_covered": "Human story + underdog narrative."
+  },
+  {
+    "id": "stunt-007",
+    "shape": "Turn a bug into a feature.",
+    "mechanic": "When something breaks, make it the product.",
+    "why_covered": "Shows adaptability + humor."
+  },
+  {
+    "id": "stunt-008",
+    "shape": "Do it live \u2014 no edits, no safety net.",
+    "mechanic": "Execute complex task in real-time, public.",
+    "why_covered": "Risk + authenticity = compelling content."
+  },
+  {
+    "id": "stunt-009",
+    "shape": "Partner with your biggest competitor.",
+    "mechanic": "Collaborate with rival on limited project.",
+    "why_covered": "Unexpected alliance creates news."
+  },
+  {
+    "id": "stunt-010",
+    "shape": "Launch without telling anyone, let them discover it.",
+    "mechanic": "Soft launch, let organic discovery drive narrative.",
+    "why_covered": "Mystery + exclusivity drives coverage."
+  },
+  {
+    "id": "stunt-011",
+    "shape": "Price it at $0, let the market decide value.",
+    "mechanic": "Pay-what-you-want or free with voluntary payment.",
+    "why_covered": "Challenges pricing norms, generates data story."
+  },
+  {
+    "id": "stunt-012",
+    "shape": "Turn customer complaints into the product roadmap.",
+    "mechanic": "Publicly address worst feedback, ship fixes live.",
+    "why_covered": "Transparency + responsiveness narrative."
+  },
+  {
+    "id": "stunt-013",
+    "shape": "Buy a competitor's product and tear it apart.",
+    "mechanic": "Public teardown of rival offering.",
+    "why_covered": "Conflict + comparison drives engagement."
+  },
+  {
+    "id": "stunt-014",
+    "shape": "Make the terms of service the marketing.",
+    "mechanic": "Write unusual ToS, make it public-facing.",
+    "why_covered": "Humor + transparency, highly shareable."
+  },
+  {
+    "id": "stunt-015",
+    "shape": "Replace your logo with user-generated content.",
+    "mechanic": "Let community create brand assets.",
+    "why_covered": "Community ownership + UGC narrative."
+  },
+  {
+    "id": "stunt-016",
+    "shape": "Ship a feature in 24 hours, stream the whole thing.",
+    "mechanic": "Live-build a requested feature under time pressure.",
+    "why_covered": "Proof of velocity + transparency."
+  },
+  {
+    "id": "stunt-017",
+    "shape": "Turn a legal threat into a product launch.",
+    "mechanic": "When threatened, turn it into marketing.",
+    "why_covered": "David vs. Goliath narrative."
+  },
+  {
+    "id": "stunt-018",
+    "shape": "Give away equity to your users.",
+    "mechanic": "Distribute ownership to early adopters.",
+    "why_covered": "Radical ownership model."
+  },
+  {
+    "id": "stunt-019",
+    "shape": "Launch a product that makes your old product obsolete.",
+    "mechanic": "Cannibalize yourself before someone else does.",
+    "why_covered": "Shows confidence + innovation velocity."
+  },
+  {
+    "id": "stunt-020",
+    "shape": "Do a stunt so boring it becomes interesting.",
+    "mechanic": "Take something mundane, do it at extreme scale.",
+    "why_covered": "Absurdist humor + contrast creates virality."
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "art-001",
+      "idea_id": "idea-001",
+      "type": "listing",
+      "proves": "existed",
+      "url_or_path": "https://flippa.com/listing/dead-agency-xyz",
+      "captured_at": "2026-09-12T15:14:46.109829",
+      "note": "The live listing. Any stranger could open it."
+    },
+    {
+      "artifact_id": "art-002",
+      "idea_id": "idea-001",
+      "type": "reply",
+      "proves": "reaction",
+      "url_or_path": "screenshot-0001.png",
+      "captured_at": "2026-09-12T15:14:46.110029",
+      "note": "Buyer DM: 'Is this real?' \u2014 outside reaction."
+    },
+    {
+      "artifact_id": "art-003",
+      "idea_id": "idea-001",
+      "type": "screenshot",
+      "proves": "number",
+      "url_or_path": "quartermaster-dashboard.png",
+      "captured_at": "2026-09-12T15:14:46.110152",
+      "note": "0 new code, 8 repos, 1 agency running in 24h"
+    }
+  ]
+}

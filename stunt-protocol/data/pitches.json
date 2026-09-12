@@ -1,0 +1,16 @@
+{
+  "pitches": [
+    {
+      "pitch_id": "pitch-001",
+      "reporter_id": "rep-003",
+      "idea_id": "idea-001",
+      "touch": 1,
+      "sent_at": "",
+      "channel": "email",
+      "subject": "Sold a dead agency in 24h",
+      "body": "You ran \"The agency that turned a mistake into a campaign\". The next beat is live: I bought a dead agency for $0 and had it operating in 24 hours, no new code. The number: 0 new code, 8 repos, 1 agency running in 24h. Proof here: https://flippa.com/listing/dead-agency-xyz\n\nWorth a look?\n\nJulius Young III \u00b7 REPLY_TO_ADDRESS \u00b7 POSTAL_ADDRESS\nTell me to stop and I will.",
+      "reply": "",
+      "outcome": ""
+    }
+  ]
+}

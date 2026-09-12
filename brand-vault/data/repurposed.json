@@ -1,0 +1,90 @@
+{
+  "source_idea": "shipped 20 connected agents in 12 hours",
+  "pillar": "ship",
+  "pillar_desc": "Shipping fast \u2014 build in public, velocity, receipts",
+  "created": "2026-09-12T15:16:31.481434",
+  "pieces": {
+    "x": "shipped 20 connected agents in 12 hours\n\nshipped 20 connected agents in 12 hours\n\nBuild systems, not tasks.",
+    "x_thread": [
+      "1/ shipped 20 connected agents in 12 hours",
+      "2/ shipped 20 connected agents in 12 hours",
+      "3/ Here's the exact play:",
+      "4/ Ship it.",
+      "5/ Follow for more."
+    ],
+    "instagram": {
+      "carousel": [
+        "Slide 1: shipped 20 connected agents in 12 hours",
+        "Slide 2: shipped 20 connected agents in 12 hours",
+        "Slide 3: The play",
+        "Slide 4: The result",
+        "Slide 5: CTA"
+      ],
+      "caption": "shipped 20 connected agents in 12 hours\n\nshipped 20 connected agents in 12 hours\n\nSave this."
+    },
+    "linkedin": "shipped 20 connected agents in 12 hours\n\nHere's what most people miss:\n\nshipped 20 connected agents in 12 hours\n\nWhat would you add?",
+    "tiktok": {
+      "hook": "Nobody talks about what happened after shipped 20 connected agents",
+      "beats": [
+        "shipped 20 connected agents in 12 hours",
+        "shipped 20 connected agents in 12 hours",
+        "The result"
+      ],
+      "length": "45-60s"
+    },
+    "email": "Subject: shipped 20 connected agents in 12 hours\n\nshipped 20 connected agents in 12 hours\n\nWorth a look?",
+    "blog": "# shipped 20 connected agents in 12 hours\n\n## The situation\nshipped 20 connected agents in 12 hours\n\n## Why it matters\n\tMost people stop here. Builders don't.\n\n## The play\n1. Do the thing\n2. Log the receipt\n3. Ship the next one"
+  },
+  "hooks": [
+    {
+      "type": "curiosity",
+      "hook": "Nobody talks about what happened after shipped 20 connected agents",
+      "words": 10
+    },
+    {
+      "type": "bold_statement",
+      "hook": "shipped 20 connected agents in 12 hours. Here's the part",
+      "words": 10
+    },
+    {
+      "type": "story",
+      "hook": "Last week I shipped 20 connected agents in 12 hours.",
+      "words": 10
+    },
+    {
+      "type": "relatable",
+      "hook": "You're going to do shipped 20 connected agents in 12",
+      "words": 10
+    },
+    {
+      "type": "question",
+      "hook": "What if shipped 20 connected agents in 12 hours was",
+      "words": 10
+    },
+    {
+      "type": "contrarian",
+      "hook": "Everyone says shipped 20 connected agents in 12 hours is",
+      "words": 10
+    },
+    {
+      "type": "curiosity",
+      "hook": "Nobody talks about what happened after shipped 20 connected agents",
+      "words": 10
+    },
+    {
+      "type": "bold_statement",
+      "hook": "shipped 20 connected agents in 12 hours. Here's the part",
+      "words": 10
+    },
+    {
+      "type": "story",
+      "hook": "Last week I shipped 20 connected agents in 12 hours.",
+      "words": 10
+    },
+    {
+      "type": "relatable",
+      "hook": "You're going to do shipped 20 connected agents in 12",
+      "words": 10
+    }
+  ]
+}

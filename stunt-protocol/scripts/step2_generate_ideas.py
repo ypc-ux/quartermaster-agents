@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Stunt Protocol Engine — Step 2: Make it impossible without your product."""
+
+import json
+from pathlib import Path
+from datetime import datetime
+
+OUTPUT_DIR = Path(__file__).parent.parent / "data"
+COMPANY = "We build operating systems for obsessed risk-takers who ship."
+
+IDEAS = [
+    {"id": "idea-001", "parent": "stunt-001", "idea": "Buy a dead agency for $0, resurrect it using only our OS.", "impossible_without": "Only Quartermaster has pre-built agents to operate any agency.", "cost": "under-1k", "days": 7},
+    {"id": "idea-002", "parent": "stunt-008", "idea": "Build an agency in 24 hours, live-streamed, using only OS modules.", "impossible_without": "Quartermaster's modules make instant agency assembly possible.", "cost": "under-1k", "days": 1},
+    {"id": "idea-003", "parent": "stunt-005", "idea": "Give away our OS free for 48 hours, track agencies launched.", "impossible_without": "Only we have an OS modular enough to give away and track.", "cost": "under-1k", "days": 2},
+    {"id": "idea-004", "parent": "stunt-016", "idea": "Ship a new OS module in 24 hours via Twitter poll, streamed live.", "impossible_without": "Quartermaster's architecture allows same-day module deployment.", "cost": "under-1k", "days": 1},
+    {"id": "idea-005", "parent": "stunt-010", "idea": "Launch a fully automated agency with zero humans, run 30 days.", "impossible_without": "Only Quartermaster has autonomous agents that run without humans.", "cost": "1k-10k", "days": 30},
+    {"id": "idea-006", "parent": "stunt-003", "idea": "Publish our entire OS playbook — the stuff agencies keep secret.", "impossible_without": "We are the only ones transparent enough to open-source our playbook.", "cost": "under-1k", "days": 3},
+    {"id": "idea-007", "parent": "stunt-014", "idea": "Write our ToS as a viral Twitter thread, make OS terms the marketing.", "impossible_without": "Quartermaster's position as an OS makes ToS a narrative device.", "cost": "under-1k", "days": 1},
+    {"id": "idea-008", "parent": "stunt-004", "idea": "100 agencies in 100 days, track every one publicly.", "impossible_without": "Quartermaster's modules make rapid deployment repeatable at scale.", "cost": "under-1k", "days": 100},
+    {"id": "idea-009", "parent": "stunt-007", "idea": "Turn OS criticism into a feature within 48 hours.", "impossible_without": "Quartermaster's build velocity makes 48-hour turnaround possible.", "cost": "under-1k", "days": 2},
+    {"id": "idea-010", "parent": "stunt-020", "idea": "Run an agency entirely from a phone for one week.", "impossible_without": "Quartermaster's mobile-first design makes phone-only operation possible.", "cost": "under-1k", "days": 7},
+    {"id": "idea-011", "parent": "stunt-009", "idea": "Partner with a competitor to co-build an OS module, give it away.", "impossible_without": "Our modular architecture makes competitor collaboration feasible.", "cost": "1k-10k", "days": 14},
+    {"id": "idea-012", "parent": "stunt-011", "idea": "Launch Quartermaster at $0, pay-what-you-want after 30 days.", "impossible_without": "Autonomous agents reduce support cost, making free tier viable.", "cost": "1k-10k", "days": 30},
+    {"id": "idea-013", "parent": "stunt-002", "idea": "Turn 'no sales team' into a fully automated sales OS.", "impossible_without": "Switchboard + Silent Selling make no-sales-team possible.", "cost": "under-1k", "days": 14},
+    {"id": "idea-014", "parent": "stunt-018", "idea": "Give 0.1% equity to every agency that launches.", "impossible_without": "Quartermaster is the only OS structured as a platform worth owning.", "cost": "under-1k", "days": 7},
+    {"id": "idea-015", "parent": "stunt-015", "idea": "Replace landing page with live dashboard of all running agencies.", "impossible_without": "We have real-time data no one else can show.", "cost": "under-1k", "days": 3},
+    {"id": "idea-016", "parent": "stunt-019", "idea": "Launch v2 with automatic free migration for v1 users.", "impossible_without": "Our deployment architecture makes zero-downtime migration possible.", "cost": "1k-10k", "days": 14},
+    {"id": "idea-017", "parent": "stunt-006", "idea": "Hire our most vocal critic to run on Quartermaster for 30 days.", "impossible_without": "Our OS is flexible enough for someone else's entire agency.", "cost": "1k-10k", "days": 30},
+    {"id": "idea-018", "parent": "stunt-012", "idea": "Publish every negative feedback as a public issue, resolve live.", "impossible_without": "Our build velocity makes real-time issue resolution possible.", "cost": "under-1k", "days": 7},
+    {"id": "idea-019", "parent": "stunt-013", "idea": "Buy a competitor's OS, tear it apart, show why we win.", "impossible_without": "Our modular architecture makes honest comparison possible.", "cost": "under-1k", "days": 7},
+    {"id": "idea-020", "parent": "stunt-017", "idea": "When regulator questions us, publish the entire compliance playbook.", "impossible_without": "PayScope gives us compliance docs no one else has.", "cost": "under-1k", "days": 7},
+]
+
+def run():
+    print(f"[Stunt Protocol] Step 2: Generate Ideas")
+    print(f"[Stunt Protocol] Company: {COMPANY}")
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_DIR / "stunt_ideas.json", "w") as f:
+        json.dump({"company": COMPANY, "generated": datetime.now().isoformat(), "count": len(IDEAS), "ideas": IDEAS}, f, indent=2)
+    print(f"[Stunt Protocol] Generated {len(IDEAS)} ideas")
+    for i, idea in enumerate(IDEAS[:3], 1):
+        print(f"  {i}. {idea['idea'][:70]}...")
+    return IDEAS
+
+if __name__ == "__main__":
+    run()

@@ -1,0 +1,55 @@
+{
+  "reporters": [
+    {
+      "reporter_id": "rep-001",
+      "name": "James Vincent",
+      "outlet": "The Verge",
+      "outlet_domain": "theverge.com",
+      "coverage_url": "https://www.theverge.com/",
+      "coverage_headline": "Agency builds fake fan blog, gets caught in 48 hours",
+      "coverage_date": "2006-12-12",
+      "beat": "",
+      "linkedin_url": "",
+      "x_handle": "",
+      "email": "",
+      "email_source": "",
+      "confidence": "U",
+      "status": "found",
+      "note": ""
+    },
+    {
+      "reporter_id": "rep-002",
+      "name": "Sarah Perez",
+      "outlet": "TechCrunch",
+      "outlet_domain": "techcrunch.com",
+      "coverage_url": "https://techcrunch.com/",
+      "coverage_headline": "This PR stunt made the front page of every outlet",
+      "coverage_date": "2019-05-03",
+      "beat": "",
+      "linkedin_url": "",
+      "x_handle": "",
+      "email": "",
+      "email_source": "",
+      "confidence": "U",
+      "status": "found",
+      "note": ""
+    },
+    {
+      "reporter_id": "rep-003",
+      "name": "(unbylined)",
+      "outlet": "Adweek",
+      "outlet_domain": "adweek.com",
+      "coverage_url": "https://www.adweek.com/",
+      "coverage_headline": "The agency that turned a mistake into a campaign",
+      "coverage_date": "2021-03-09",
+      "beat": "",
+      "linkedin_url": "",
+      "x_handle": "",
+      "email": "",
+      "email_source": "",
+      "confidence": "U",
+      "status": "verified",
+      "note": ""
+    }
+  ]
+}
