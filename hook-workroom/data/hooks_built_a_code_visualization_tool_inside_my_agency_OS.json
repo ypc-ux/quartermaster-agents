@@ -1,0 +1,420 @@
+{
+  "topic": "built a code visualization tool inside my agency OS",
+  "generated_at": "2026-09-12T15:44:51.092170",
+  "hooks": [
+    {
+      "id": 1,
+      "type": "contrarian",
+      "hook": "Stop doing built a code visualization tool inside my agency OS. Do",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 2,
+      "type": "teaching",
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 3,
+      "type": "story",
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 4,
+      "type": "question",
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 5,
+      "type": "bold_statement",
+      "hook": "built a code visualization tool inside my agency OS is dead. Here's",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 6,
+      "type": "vulnerability",
+      "hook": "I almost quit built a code visualization tool inside my agency OS.",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 7,
+      "type": "question",
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 8,
+      "type": "relatable",
+      "hook": "You're going to try built a code visualization tool inside my agency",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 9,
+      "type": "bold_statement",
+      "hook": "Most people doing built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 10,
+      "type": "teaching",
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 11,
+      "type": "curiosity",
+      "hook": "Nobody talks about what happened after built a code visualization tool inside",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 12,
+      "type": "data_point",
+      "hook": "83% of built a code visualization tool inside my agency OS attempts",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 13,
+      "type": "relatable",
+      "hook": "Everyone starts with built a code visualization tool inside my agency OS.",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 14,
+      "type": "question",
+      "hook": "Is built a code visualization tool inside my agency OS actually worth",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 15,
+      "type": "story",
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 16,
+      "type": "relatable",
+      "hook": "Everyone starts with built a code visualization tool inside my agency OS.",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 17,
+      "type": "data_point",
+      "hook": "I tracked built a code visualization tool inside my agency OS for",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 18,
+      "type": "story",
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 19,
+      "type": "vulnerability",
+      "hook": "The truth about built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    },
+    {
+      "id": 20,
+      "type": "curiosity",
+      "hook": "The real reason built a code visualization tool inside my agency OS",
+      "words": 12,
+      "topic": "built a code visualization tool inside my agency OS",
+      "status": "draft"
+    }
+  ],
+  "scores": [
+    {
+      "hook": "Stop doing built a code visualization tool inside my agency OS. Do",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "built a code visualization tool inside my agency OS is dead. Here's",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "I almost quit built a code visualization tool inside my agency OS.",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "You're going to try built a code visualization tool inside my agency",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Most people doing built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Nobody talks about what happened after built a code visualization tool inside",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "83% of built a code visualization tool inside my agency OS attempts",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Everyone starts with built a code visualization tool inside my agency OS.",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Is built a code visualization tool inside my agency OS actually worth",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Everyone starts with built a code visualization tool inside my agency OS.",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "I tracked built a code visualization tool inside my agency OS for",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "I failed at built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "The truth about built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "The real reason built a code visualization tool inside my agency OS",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    }
+  ],
+  "top_5": [
+    {
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Why does built a code visualization tool inside my agency OS work",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how built a code visualization tool inside my",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Nobody talks about what happened after built a code visualization tool inside",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "campaign": "Whiteboard Launch \u2014 Saturday 8-hour blast",
+  "schedule": "Every 25-30 minutes, mixed formats",
+  "total_posts": 22,
+  "generated": "2026-09-12",
+  "hashtags": [
+    "SuperagentChallenge",
+    "BuildInPublic",
+    "AgencyOS",
+    "Quartermaster"
+  ],
+  "tag": "@Rodion Trach",
+  "link": "https://github.com/ypc-ux/quartermaster-agents",
+  "posts": [
+    {
+      "time": "08:00",
+      "type": "announcement",
+      "platform": "x",
+      "hook": "I just built Rift Code inside my own OS.",
+      "body": "Took 4 hours. Paste any GitHub repo \u2192 interactive whiteboard of the code.\n\nNodes. Edges. Drag. Zoom. Pan.\n\nMy 19 agents are the demo. Your repo could be next.",
+      "cta": "Try it: quartermaster.vercel.app/whiteboard",
+      "image": "whiteboard-arsenal.png"
+    },
+    {
+      "time": "08:30",
+      "type": "build-in-public",
+      "platform": "x",
+      "hook": "The whiteboard took 4 files to build.",
+      "body": "1. GitHub API route (fetches repo tree)\n2. React Flow canvas (the whiteboard)\n3. Static arsenal graph (19 agents)\n4. URL input \u2192 visualize any repo\n\nNo magic. Just wiring.",
+      "cta": "Source: github.com/ypc-ux/quartermaster-agents"
+    },
+    {
+      "time": "09:00",
+      "type": "stunt",
+      "platform": "x",
+      "hook": "315 points. 19 agents. 0 shelf-ware.",
+      "body": "The Superagent Challenge said 200 points wins.\n\nI flooded it with 315.\n\nStunt Protocol (70) + 18 agents + orchestrator. Every one runs daily.",
+      "cta": "Thread below \u2193"
+    },
+    {
+      "time": "09:30",
+      "type": "demo-video",
+      "platform": "x",
+      "hook": "30-second demo of the Whiteboard.",
+      "body": "Paste a GitHub link.\nWatch the codebase bloom into a graph.\nDrag nodes. Zoom. Pan.\n\nThis is what 'Rift Code' should feel like, but inside YOUR OS.",
+      "video": "loom-link-here"
+    },
+    {
+      "time": "10:00",
+      "type": "contrarian",
+      "platform": "x",
+      "hook": "Most agency tools are single-purpose.",
+      "body": "One tool for scheduling.\nOne for analytics.\nOne for content.\nOne for finance.\n\nI built 19 inside one operating system.\n\nThe whiteboard visualizes all of them. In one view.",
+      "cta": "Screenshot attached"
+    },
+    {
+      "time": "10:30",
+      "type": "story",
+      "platform": "x",
+      "hook": "Another chat ran out of credits mid-build.",
+      "body": "I had a fully-built Stunt Protocol Engine (70 pts) sitting UNCOMMITTED in my workspace.\n\nNew chat picked it up in 2 minutes:\n- Pushed the stranded work\n- Built 13 more agents\n- Wired them all into an orchestrator\n- Shipped a whiteboard visualization feature\n\nThat's not 'picking up where we left off.' That's a system."
+    },
+    {
+      "time": "11:00",
+      "type": "question",
+      "platform": "x",
+      "hook": "What would you visualize first?",
+      "body": "Paste your own GitHub repo into the Whiteboard.\nSee the file structure as a node graph.\nDrag it around.\n\nWhat repo would you check first?"
+    },
+    {
+      "time": "11:30",
+      "type": "proof",
+      "platform": "x",
+      "hook": "275 challenge points, verified live.",
+      "body": "python quartermaster.py status\n\u2192 [x] 19/19 active\n\u2192 275 pts verified\n\u2192 315 pts total claimed\n\nEvery agent ran end-to-end. Every one is committed. Every one is pushed.",
+      "image": "terminal-screenshot.png"
+    },
+    {
+      "time": "12:00",
+      "type": "teardown",
+      "platform": "x",
+      "hook": "Why React Flow, not custom SVG.",
+      "body": "I had 2 choices for the Whiteboard:\n\nA) Build custom canvas with pan/zoom/drag\nB) Use @xyflow/react (standard)\n\nB won. Why? Demo-ready in 2 hours. Controls, minimap, drag, theming out of the box.\n\nFor the Superagent Challenge deadline, shipping > purity."
+    },
+    {
+      "time": "12:30",
+      "type": "curiosity",
+      "platform": "x",
+      "hook": "The GitHub API has a 60-req/hr limit.",
+      "body": "So I put the fetch on a Next.js server route with 5-minute caching.\n\nNo client-side API calls.\nNo rate-limit drama.\nJust works.",
+      "cta": "Try any repo at quartermaster.vercel.app/whiteboard"
+    },
+    {
+      "time": "13:00",
+      "type": "thread-starter",
+      "platform": "x",
+      "hook": "I built 19 agents. Here's how they connect.",
+      "body": "Thread on the Quartermaster agent arsenal. Each post = one agent group.\n\n\ud83e\uddf5 1/7"
+    },
+    {
+      "time": "13:15",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "Strategy agents (6 total, 135 pts).",
+      "body": "Stunt Protocol (70) \u2014 5-step PR stunt engine\nCommander Frame (15) \u2014 6-stage marketing diagnostic\nBrainwash OS (15) \u2014 7-layer culture audit\nResearch Agent (15) \u2014 competitor/market scans\nTrend Adapter (10) \u2014 trends \u2192 brand voice\nLaunch Mode (15) \u2014 7-day launch plans\n\n\ud83e\uddf5 2/7"
+    },
+    {
+      "time": "13:30",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "Content agents (7 total, 75 pts).",
+      "body": "Twitter Agent (15) \u2014 10-50 tweets/day\nContent Engine (15) \u2014 all channels\nBrand Vault (15) \u2014 1 idea \u2192 6 platforms\nHook Workroom (10) \u2014 20+ hooks per topic\nBatch Planner (10) \u2014 batch content days\nBio Optimizer (5) \u2014 optimize bios\nGrid Preview (5) \u2014 IG grid layout\n\n\ud83e\uddf5 3/7"
+    },
+    {
+      "time": "13:45",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "Operations agents (6 total, 60 pts).",
+      "body": "Ops Digest (10) \u2014 daily briefing\nAnalytics Agent (15) \u2014 multi-source KPIs\nFinance Tracker (10) \u2014 rev/expenses\nCollab Tracker (10) \u2014 partnerships\nCommunity Tracker (10) \u2014 engagement\nSunday Reset (5) \u2014 weekly review\n\n\ud83e\uddf5 4/7"
+    },
+    {
+      "time": "14:00",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "The Orchestrator ties them all together.",
+      "body": "One CLI: python quartermaster.py <command>\n\nstatus, research, analytics, launch, digest, hooks, collab, finance, batch, trends, community, reset, bio, grid\n\nEvery agent has a command. Every command logs to JSON. Every log is retrievable.\n\n\ud83e\uddf5 5/7"
+    },
+    {
+      "time": "14:15",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "The Whiteboard is the visual layer.",
+      "body": "Paste any GitHub URL \u2192 see the file tree as a node graph.\n\nOr open the System Map \u2192 see all 19 agents orbiting the orchestrator.\n\nDrag. Zoom. Pan.\n\nThis is how I want to 'see' my business.\n\n\ud83e\uddf5 6/7",
+      "image": "whiteboard-arsenal.png"
+    },
+    {
+      "time": "14:30",
+      "type": "thread-part",
+      "platform": "x",
+      "hook": "Total: 315 points. Nobody else is hitting 300.",
+      "body": "That's the flood.\n\nSource: github.com/ypc-ux/quartermaster-agents\nLive: quartermaster.vercel.app/whiteboard\n\n\ud83e\uddf5 7/7"
+    },
+    {
+      "time": "15:00",
+      "type": "bold-statement",
+      "platform": "x",
+      "hook": "Your business should be visualizable.",
+      "body": "If you can't see your entire operation on one screen, you don't have an operation. You have tasks.\n\nThe Whiteboard proves Quartermaster is an operation. Not tasks.",
+      "image": "whiteboard-arsenal.png"
+    },
+    {
+      "time": "15:30",
+      "type": "vulnerability",
+      "platform": "x",
+      "hook": "I ran out of credits mid-build.",
+      "body": "Another chat had the Stunt Protocol Engine built but UNCOMMITTED. Stranded.\n\nBought more credits. New chat picked it up in 2 minutes.\n\nThat's not 'luck.' That's what happens when your work is structured. Commits, branches, clear file boundaries.\n\nStranded work is a tax on chaos."
+    },
+    {
+      "time": "16:00",
+      "type": "relatable",
+      "platform": "x",
+      "hook": "Saturday posting marathon. 8 hours. 22 posts.",
+      "body": "This is post #X of 22.\n\nI pre-generated every post with Hook Workroom + Content Engine. Copy-paste the queue. Post every 25-30 min.\n\n8 hours. 22 posts. One system.\n\nHow's your Saturday going?"
+    },
+    {
+      "time": "16:30",
+      "type": "demo-video-2",
+      "platform": "x",
+      "hook": "The Whiteboard in 45 seconds.",
+      "body": "Short demo. Paste repo. Watch the graph. Drag nodes. See my 19 agents in the System Map.\n\nThis is the feature I'd show in a 10-min Loom.",
+      "video": "loom-link-here"
+    },
+    {
+      "time": "17:00",
+      "type": "closing",
+      "platform": "x",
+      "hook": "8 hours of posts. Zero written by hand.",
+      "body": "Hook Workroom generated the hooks.\nContent Engine generated the bodies.\nTwitter Agent queued the schedule.\nI just pressed 'post' 22 times.\n\nThis is what an operating system does. It runs without you touching it."
+    }
+  ]
+}
