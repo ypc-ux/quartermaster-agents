@@ -1,0 +1,420 @@
+{
+  "topic": "building agency systems",
+  "generated_at": "2026-09-12T15:32:09.035291",
+  "hooks": [
+    {
+      "id": 1,
+      "type": "question",
+      "hook": "Why does building agency systems work for some people but not others?",
+      "words": 12,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 2,
+      "type": "contrarian",
+      "hook": "The advice about building agency systems is backwards.",
+      "words": 8,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 3,
+      "type": "relatable",
+      "hook": "You're going to try building agency systems too. Here's how it goes.",
+      "words": 12,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 4,
+      "type": "vulnerability",
+      "hook": "I was wrong about building agency systems. Here's what I learned.",
+      "words": 11,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 5,
+      "type": "story",
+      "hook": "Last week I building agency systems. It changed everything.",
+      "words": 9,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 6,
+      "type": "contrarian",
+      "hook": "Everyone says building agency systems is smart. It's not.",
+      "words": 9,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 7,
+      "type": "story",
+      "hook": "I failed at building agency systems for 2 years. Then I figured",
+      "words": 12,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 8,
+      "type": "curiosity",
+      "hook": "The real reason building agency systems works isn't what you think.",
+      "words": 11,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 9,
+      "type": "data_point",
+      "hook": "I tracked building agency systems for 6 months. The numbers are wild.",
+      "words": 12,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 10,
+      "type": "teaching",
+      "hook": "Let me show you how building agency systems actually works.",
+      "words": 10,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 11,
+      "type": "teaching",
+      "hook": "Let me show you how building agency systems actually works.",
+      "words": 10,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 12,
+      "type": "bold_statement",
+      "hook": "building agency systems is dead. Here's what replaced it.",
+      "words": 9,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 13,
+      "type": "story",
+      "hook": "Last week I building agency systems. It changed everything.",
+      "words": 9,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 14,
+      "type": "curiosity",
+      "hook": "Nobody talks about what happened after building agency systems.",
+      "words": 9,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 15,
+      "type": "vulnerability",
+      "hook": "I was wrong about building agency systems. Here's what I learned.",
+      "words": 11,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 16,
+      "type": "bold_statement",
+      "hook": "Most people doing building agency systems are wasting their time.",
+      "words": 10,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 17,
+      "type": "question",
+      "hook": "Why does building agency systems work for some people but not others?",
+      "words": 12,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 18,
+      "type": "relatable",
+      "hook": "Everyone starts with building agency systems. Most quit. Here's why.",
+      "words": 10,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 19,
+      "type": "curiosity",
+      "hook": "The real reason building agency systems works isn't what you think.",
+      "words": 11,
+      "topic": "building agency systems",
+      "status": "draft"
+    },
+    {
+      "id": 20,
+      "type": "data_point",
+      "hook": "One stat about building agency systems changed my entire approach.",
+      "words": 10,
+      "topic": "building agency systems",
+      "status": "draft"
+    }
+  ],
+  "scores": [
+    {
+      "hook": "Why does building agency systems work for some people but not others?",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "The advice about building agency systems is backwards.",
+      "scores": {
+        "clarity": 10,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 24,
+      "max": 30
+    },
+    {
+      "hook": "You're going to try building agency systems too. Here's how it goes.",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "I was wrong about building agency systems. Here's what I learned.",
+      "scores": {
+        "clarity": 7,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 21,
+      "max": 30
+    },
+    {
+      "hook": "Last week I building agency systems. It changed everything.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 23,
+      "max": 30
+    },
+    {
+      "hook": "Everyone says building agency systems is smart. It's not.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 23,
+      "max": 30
+    },
+    {
+      "hook": "I failed at building agency systems for 2 years. Then I figured",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "The real reason building agency systems works isn't what you think.",
+      "scores": {
+        "clarity": 7,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 21,
+      "max": 30
+    },
+    {
+      "hook": "I tracked building agency systems for 6 months. The numbers are wild.",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 5,
+        "speakable": 6
+      },
+      "total": 17,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how building agency systems actually works.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how building agency systems actually works.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    },
+    {
+      "hook": "building agency systems is dead. Here's what replaced it.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 26,
+      "max": 30
+    },
+    {
+      "hook": "Last week I building agency systems. It changed everything.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 23,
+      "max": 30
+    },
+    {
+      "hook": "Nobody talks about what happened after building agency systems.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 26,
+      "max": 30
+    },
+    {
+      "hook": "I was wrong about building agency systems. Here's what I learned.",
+      "scores": {
+        "clarity": 7,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 21,
+      "max": 30
+    },
+    {
+      "hook": "Most people doing building agency systems are wasting their time.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 22,
+      "max": 30
+    },
+    {
+      "hook": "Why does building agency systems work for some people but not others?",
+      "scores": {
+        "clarity": 6,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 20,
+      "max": 30
+    },
+    {
+      "hook": "Everyone starts with building agency systems. Most quit. Here's why.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    },
+    {
+      "hook": "The real reason building agency systems works isn't what you think.",
+      "scores": {
+        "clarity": 7,
+        "curiosity": 8,
+        "speakable": 6
+      },
+      "total": 21,
+      "max": 30
+    },
+    {
+      "hook": "One stat about building agency systems changed my entire approach.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 5,
+        "speakable": 9
+      },
+      "total": 22,
+      "max": 30
+    }
+  ],
+  "top_5": [
+    {
+      "hook": "building agency systems is dead. Here's what replaced it.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 26,
+      "max": 30
+    },
+    {
+      "hook": "Nobody talks about what happened after building agency systems.",
+      "scores": {
+        "clarity": 9,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 26,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how building agency systems actually works.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    },
+    {
+      "hook": "Let me show you how building agency systems actually works.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    },
+    {
+      "hook": "Everyone starts with building agency systems. Most quit. Here's why.",
+      "scores": {
+        "clarity": 8,
+        "curiosity": 8,
+        "speakable": 9
+      },
+      "total": 25,
+      "max": 30
+    }
+  ]
+}

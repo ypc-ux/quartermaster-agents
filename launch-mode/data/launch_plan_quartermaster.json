@@ -1,0 +1,250 @@
+{
+  "launch_plan": {
+    "product": "Quartermaster",
+    "launch_date": "2026-09-12T15:32:09.729574",
+    "audience": "agency owners",
+    "phases": [
+      {
+        "day": 1,
+        "phase": "teaser",
+        "date": "2026-09-12",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "teaser",
+            "scheduled_for": "2026-09-12T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[teaser] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "teaser",
+            "scheduled_for": "2026-09-12T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[teaser] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "teaser",
+            "scheduled_for": "2026-09-12T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[teaser] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Teaser content"
+      },
+      {
+        "day": 2,
+        "phase": "announcement",
+        "date": "2026-09-13",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "announcement",
+            "scheduled_for": "2026-09-13T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[announcement] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "announcement",
+            "scheduled_for": "2026-09-13T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[announcement] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "announcement",
+            "scheduled_for": "2026-09-13T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[announcement] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Announcement content"
+      },
+      {
+        "day": 3,
+        "phase": "deep_dive",
+        "date": "2026-09-14",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "deep_dive",
+            "scheduled_for": "2026-09-14T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[deep_dive] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "deep_dive",
+            "scheduled_for": "2026-09-14T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[deep_dive] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "deep_dive",
+            "scheduled_for": "2026-09-14T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[deep_dive] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Deep Dive content"
+      },
+      {
+        "day": 4,
+        "phase": "social_proof",
+        "date": "2026-09-15",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "social_proof",
+            "scheduled_for": "2026-09-15T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[social_proof] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "social_proof",
+            "scheduled_for": "2026-09-15T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[social_proof] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "social_proof",
+            "scheduled_for": "2026-09-15T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[social_proof] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Social Proof content"
+      },
+      {
+        "day": 5,
+        "phase": "urgency",
+        "date": "2026-09-16",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "urgency",
+            "scheduled_for": "2026-09-16T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[urgency] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "urgency",
+            "scheduled_for": "2026-09-16T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[urgency] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "urgency",
+            "scheduled_for": "2026-09-16T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[urgency] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Urgency content"
+      },
+      {
+        "day": 6,
+        "phase": "last_chance",
+        "date": "2026-09-17",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "last_chance",
+            "scheduled_for": "2026-09-17T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[last_chance] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "last_chance",
+            "scheduled_for": "2026-09-17T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[last_chance] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "last_chance",
+            "scheduled_for": "2026-09-17T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[last_chance] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Last Chance content"
+      },
+      {
+        "day": 7,
+        "phase": "post_launch",
+        "date": "2026-09-18",
+        "pieces": [
+          {
+            "type": "tweet",
+            "phase": "post_launch",
+            "scheduled_for": "2026-09-18T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[post_launch] Quartermaster - tweet hook"
+          },
+          {
+            "type": "email",
+            "phase": "post_launch",
+            "scheduled_for": "2026-09-18T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[post_launch] Quartermaster - email hook"
+          },
+          {
+            "type": "blog_post",
+            "phase": "post_launch",
+            "scheduled_for": "2026-09-18T15:32:09.729574",
+            "status": "drafted",
+            "hook": "[post_launch] Quartermaster - blog_post hook"
+          }
+        ],
+        "focus": "Post Launch content"
+      }
+    ],
+    "total_pieces": 21,
+    "generated_at": "2026-09-12T15:32:09.729592"
+  },
+  "email_sequence": {
+    "type": "email_sequence",
+    "product": "Quartermaster",
+    "emails": [
+      {
+        "day": -3,
+        "type": "teaser",
+        "subject": "Something's coming for Quartermaster..."
+      },
+      {
+        "day": 0,
+        "type": "announcement",
+        "subject": "Introducing Quartermaster"
+      },
+      {
+        "day": 2,
+        "type": "deep_dive",
+        "subject": "How Quartermaster actually works"
+      },
+      {
+        "day": 5,
+        "type": "social_proof",
+        "subject": "What people are saying about Quartermaster"
+      },
+      {
+        "day": 6,
+        "type": "last_chance",
+        "subject": "Last chance: Quartermaster closes soon"
+      }
+    ]
+  },
+  "summary": {
+    "total_content_pieces": 26,
+    "launch_phases": 7,
+    "email_sequence_length": 5
+  }
+}

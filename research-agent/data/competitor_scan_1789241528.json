@@ -1,0 +1,30 @@
+{
+  "type": "competitor_scan",
+  "scans": [
+    {
+      "competitor": "Competitor A",
+      "scanned_at": "2026-09-12T15:32:08.942641",
+      "metrics": {
+        "pricing": "[scan for pricing]",
+        "positioning": "[scan for positioning]",
+        "content_strategy": "[scan for content_strategy]",
+        "audience_size": "[scan for audience_size]",
+        "product_features": "[scan for product_features]"
+      },
+      "status": "scanned"
+    },
+    {
+      "competitor": "Competitor B",
+      "scanned_at": "2026-09-12T15:32:08.942655",
+      "metrics": {
+        "pricing": "[scan for pricing]",
+        "positioning": "[scan for positioning]",
+        "content_strategy": "[scan for content_strategy]",
+        "audience_size": "[scan for audience_size]",
+        "product_features": "[scan for product_features]"
+      },
+      "status": "scanned"
+    }
+  ],
+  "count": 2
+}
