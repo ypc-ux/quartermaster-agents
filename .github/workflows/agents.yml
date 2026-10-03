@@ -73,15 +73,14 @@ jobs:
             git push
           fi
 
-      - name: Notify failure to Slack
+      - name: Notify phone on failure
         if: failure()
         run: |
-          if [ -n "$SLACK_WEBHOOK_URL" ]; then
-            curl -s -X POST "$SLACK_WEBHOOK_URL" \
-              -H 'Content-type: application/json' \
-              --data '{"text":"⚠️ Quartermaster Agents workflow failed. Check the Actions tab."}'
-          else
-            echo "SLACK_WEBHOOK_URL not set — skipping alert"
-          fi
+          curl -s -o /dev/null \
+            -H "Title: Quartermaster agents failed" \
+            -H "Priority: urgent" \
+            -H "Tags: warning" \
+            -d "A quartermaster-agents job failed. Check the Actions tab." \
+            "https://ntfy.sh/$NTFY_TOPIC" || true
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
