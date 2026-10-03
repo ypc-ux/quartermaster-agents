@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Twitter Agent — Quartermaster. Posts high-value tweets using Commander Frame triggers."""
+"""Twitter Agent — Quartermaster. Posts high-value tweets using Commander Frame triggers.
+
+Safety: runs in DRAFT MODE by default. It generates content and records it, but
+does NOT call the Twitter API. Set TWITTER_DRAFT=false to enable live posting.
+"""
 
 import json, os, random, time
 from datetime import datetime
@@ -8,6 +12,9 @@ from pathlib import Path
 MAX_TWEETS_PER_DAY = 50
 MIN_TWEETS_PER_DAY = 10
 MIN_INTERVAL_MINUTES = 30
+
+# Draft mode: true unless explicitly disabled. Only post when the owner opts in.
+DRAFT_MODE = os.getenv("TWITTER_DRAFT", "true").lower() not in ("false", "0", "no")
 
 PILLARS = ["agency_lessons","builder_mindset","marketing_teardown","fintech_stripe","systems_thinking","hustle_transparency","contrarian_take"]
 
@@ -64,6 +71,18 @@ LESSONS = [
 
 TEARDOWNS = [
     "The headline is generic. No specific number. No clear outcome. Fix the headline, fix the conversion.",
+    "No objection preemption. The #1 objection is right there and they're ignoring it.",
+    "The offer is vague. 'Grow your business' isn't an offer. '$3K more MRR in 90 days' is.",
+    "Social proof is missing or fake-looking. Real numbers > testimonials.",
+    "The CTA is weak. 'Learn more' gets ignored. 'Book a 15-min diagnostic call' converts.",
+]
+
+CONTRARIAN = [
+    "You don't need a personal brand. You need a portfolio of shipped work.",
+    "Niche down is bad advice for agencies. Go wide, then let clients self-select.",
+    "Cold email is overrated. Build something people want to find you for.",
+    "You don't need more followers. You need the right 100 clients.",
+]
 
 def generate_tweet():
     """Generate a single tweet from content pillars + trigger hooks."""
@@ -73,14 +92,14 @@ def generate_tweet():
     if not matching:
         matching = LESSONS
     lesson = random.choice(matching)
-    
+
     if pillar == "marketing_teardown":
         tweet = f"{hook}\n\n{random.choice(['The problem: ','Issue: ','Diagnosis: '])}{random.choice(TEARDOWNS)}"
     elif pillar == "contrarian_take":
         tweet = f"{hook}\n\n{random.choice(CONTRARIAN)}"
     else:
         tweet = f"{hook}\n\n{lesson['p']}"
-    return tweet[:280]
+    return tweet
 
 def get_queue():
     qp = Path(__file__).parent.parent / "queue.json"
@@ -92,7 +111,10 @@ def save_queue(queue):
         json.dump(queue, f, indent=2)
 
 def post_tweet(text):
-    """Post via Twitter API v2. Requires env vars."""
+    """Post via Twitter API v2. Requires env vars. No-op in draft mode."""
+    if DRAFT_MODE:
+        print("[Twitter Agent] DRAFT MODE — not posting:", text[:60] + "...")
+        return {"ok": False, "err": "draft_mode"}
     try:
         import tweepy
         client = tweepy.Client(
@@ -114,9 +136,9 @@ def post_tweet(text):
         return {"ok": False, "err": str(e)}
 
 def run():
-    print(f"[Twitter Agent] Starting {datetime.now().isoformat()}")
+    print(f"[Twitter Agent] Starting {datetime.now().isoformat()}" + (" (DRAFT MODE)" if DRAFT_MODE else ""))
     queue = get_queue()
-    
+
     if not queue:
         n = random.randint(MIN_TWEETS_PER_DAY, MAX_TWEETS_PER_DAY)
         print(f"[Twitter Agent] Generating {n} tweets...")
@@ -128,19 +150,23 @@ def run():
                 "created": datetime.now().isoformat(),
             })
         save_queue(queue)
-    
+
     posted = sum(1 for t in queue if t.get("status") == "posted" and
                  datetime.fromisoformat(t.get("posted_at","2020-01-01")).date() == datetime.now().date())
-    
+
     if posted >= MAX_TWEETS_PER_DAY:
         print(f"[Twitter Agent] Daily limit reached ({posted}/{MAX_TWEETS_PER_DAY})")
         return
-    
+
     pending = [t for t in queue if t["status"] == "pending"]
     to_post = min(len(pending), MAX_TWEETS_PER_DAY - posted)
     print(f"[Twitter Agent] Posting {to_post}/{len(pending)}...")
-    
+
     for i, t in enumerate(pending[:to_post]):
+        if DRAFT_MODE:
+            # Leave items pending so they can post once live mode is enabled.
+            print(f"[Twitter Agent] DRAFT — would post: {t['text'][:60]}...")
+            break
         r = post_tweet(t["text"])
         t["status"] = "posted" if r["ok"] else "failed"
         t["posted_at"] = datetime.now().isoformat()
@@ -151,21 +177,8 @@ def run():
             delay = random.randint(MIN_INTERVAL_MINUTES * 60, (MIN_INTERVAL_MINUTES + 30) * 60)
             print(f"[Twitter Agent] Sleeping {delay}s...")
             time.sleep(delay)
-    
+
     print(f"[Twitter Agent] Done. Posted today: {posted + to_post}")
 
 if __name__ == "__main__":
     run()
-
-    "No objection preemption. The #1 objection is right there and they're ignoring it.",
-    "The offer is vague. 'Grow your business' isn't an offer. '$3K more MRR in 90 days' is.",
-    "Social proof is missing or fake-looking. Real numbers > testimonials.",
-    "The CTA is weak. 'Learn more' gets ignored. 'Book a 15-min diagnostic call' converts.",
-]
-
-CONTRARIAN = [
-    "You don't need a personal brand. You need a portfolio of shipped work.",
-    "Niche down is bad advice for agencies. Go wide, then let clients self-select.",
-    "Cold email is overrated. Build something people want to find you for.",
-    "You don't need more followers. You need the right 100 clients.",
-]
