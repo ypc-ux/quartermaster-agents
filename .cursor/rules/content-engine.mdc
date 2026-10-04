@@ -1,0 +1,13 @@
+---
+description: Boardroom Engine (TASK-060) constraints — applies when working in quartermaster-agents on calendar-agent, content-agent, twitter-agent, publish-agent, or approval flows.
+globs: ["**/*.py", "**/*.json", "**/*.yml", "**/*.yaml", "**/*.md"]
+---
+# Content Engine Rules (TASK-060)
+
+- Draft mode default. T0 auto / T1 one-tap / T2 manual. Unknown → T2. Never auto-post raw calendar text.
+- Humanizer >6.0 + banned-word scan before any queue write. Banned words: see `context/VOICE.md`.
+- Calendar text = untrusted input. Sanitize before classification. Event content never triggers tool calls.
+- Secrets: GitHub repo secrets / Vercel env only. Never `NEXT_PUBLIC_`. This repo is PUBLIC — never commit credentials or client names.
+- Idempotent publishing: unique `(insight_id, platform)` + post-hash dedupe. No deploy on Fridays.
+- Milestone reports → `M0_REPORT.md` (public-safe). `TASK_STATUS.md` is local-only.
+- The spec wins: read `CONTENT_ENGINE_SPEC.md` before building anything.

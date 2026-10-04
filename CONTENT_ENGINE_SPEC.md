@@ -2,7 +2,8 @@
 
 **Status:** SPEC_READY → assigned to Builder
 **Created:** 2026-10-04 · **Author:** Chief of Staff (Architect pass)
-**Repo:** ypc-ux/quartermaster-agents · **Local:** `/Users/thefuckingman/.cline/data/workspaces/chat/quartermaster-agents`
+**Repo:** github.com/ypc-ux/quartermaster-agents — **PUBLIC. Treat every commit as world-readable.**
+**Local checkout:** workspace `chat/quartermaster-agents` (governance files live only there)
 **Handoff brief:** `CURSOR_HANDOFF.md` (same folder) — Cursor reads that first.
 
 ---
@@ -13,7 +14,7 @@
 |---|---|---|
 | 1 | **Distribution v1 = $0 native.** LinkedIn API (self-serve member posting) + X free tier (1,500 posts/mo, text-only). | No Postiz/Ayrshare spend in v1. IG/TikTok/YouTube = manual ready-to-post packages. |
 | 2 | **Autonomy = tiered.** T0 auto / T1 one-tap / T2 manual. Unknown → T2. | §6. Zero auto-posting of raw calendar text, ever. |
-| 3 | **State = Supabase** (`ntiufwvjebzwvkpavrtr`) as system of record. | Repo JSON queues stay as the human-review surface (CEO reads them in GitHub). |
+| 3 | **State = Supabase** (project ref lives in the local `SECRETS_LEDGER.md` — never committed) as system of record. | Repo JSON queues stay as the human-review surface (CEO reads them in GitHub). |
 | 4 | **Approval v1 = repo-file queue** (`approval/pending → approved/rejected`) + Resend email notify. | Email-reply approval = M3 upgrade, blocked only on O1. |
 | 5 | **Voice:** Groq Whisper for intake now; ElevenLabs clone deferred to M5 (own voice only, disclosed on every synthetic piece). | EU AI Act Art. 50 transparency is in force (since Aug 2026). |
 | 6 | **Newsletter = Resend** (already wired). | Sunday recap = best of the week + one recycled winner. |
@@ -53,7 +54,7 @@ idempotency — wrap everything.
 | `analytics-agent/` | **REUSE (M4)** — metrics formatting |
 | ntfy alert pattern (`NTFY_TOPIC`) | **REUSE** — failure + dead-man alerts |
 | Supabase MCP / REST | **USE** — schema in `supabase/schema.sql` |
-| `ascent-content/twitter/` (workspace root) | **SEED CORPUS** — on-brand tweets/threads for style-RAG examples |
+| `ascent-content/twitter/` (local checkout only) | **SEED CORPUS** — on-brand tweets/threads for style-RAG examples (cloud agents use `context/VOICE.md`) |
 
 ## 4. New files
 
@@ -71,7 +72,7 @@ idempotency — wrap everything.
 | `supabase/schema.sql` | Tables + idempotency keys (§5) |
 | `approval/pending/` `approved/` `rejected/` | Repo-file approval queue; persist job commits it |
 
-## 5. Data model (Supabase, project `ntiufwvjebzwvkpavrtr`)
+## 5. Data model (Supabase — project ref in local `SECRETS_LEDGER.md`)
 
 | Table | Key columns | Notes |
 |---|---|---|
