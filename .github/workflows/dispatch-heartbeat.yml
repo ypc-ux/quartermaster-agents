@@ -1,0 +1,31 @@
+name: Dispatch heartbeat
+
+# Primary scheduler for the DISPATCH pipeline (Vercel Hobby only allows
+# once-per-day crons; GitHub Actions is free on public repos).
+# Secrets live in repo secrets (ypc-ux/quartermaster-agents), never in code.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'        # ingest + generate every 15 min
+    - cron: '0 8,12,17 * * 1-5'   # publish at SOP-01 slots (UTC)
+  workflow_dispatch:
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ingest
+        run: curl -sS -X GET "${DISPATCH_URL}/api/cron/ingest" -H "Authorization: Bearer ${CRON_SECRET}"
+        env:
+          DISPATCH_URL: https://dispatch-nine-murex.vercel.app
+          CRON_SECRET: ${{ secrets.DISPATCH_CRON_SECRET }}
+      - name: Generate
+        run: curl -sS -X GET "${DISPATCH_URL}/api/cron/generate" -H "Authorization: Bearer ${CRON_SECRET}"
+        env:
+          DISPATCH_URL: https://dispatch-nine-murex.vercel.app
+          CRON_SECRET: ${{ secrets.DISPATCH_CRON_SECRET }}
+      - name: Publish
+        run: curl -sS -X GET "${DISPATCH_URL}/api/cron/publish" -H "Authorization: Bearer ${CRON_SECRET}"
+        env:
+          DISPATCH_URL: https://dispatch-nine-murex.vercel.app
+          CRON_SECRET: ${{ secrets.DISPATCH_CRON_SECRET }}

@@ -1,0 +1,21 @@
+# deps
+node_modules/
+
+# next.js
+.next/
+out/
+
+# env — NEVER commit credentials (repo is public)
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel/
+
+# misc
+*.log
+.DS_Store
+.vercel
+.env*
+!.env.example
