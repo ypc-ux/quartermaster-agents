@@ -17,6 +17,8 @@ export const ENV = {
   draftModel:
     process.env.DRAFT_MODEL ??
     'nvidia/nemotron-3-super-120b-a12b:free,google/gemma-4-31b-it:free,nvidia/nemotron-3.5-lightning:free',
+  groqClassifyModel: process.env.GROQ_CLASSIFY_MODEL ?? 'qwen/qwen3.8-27b',
+  groqDraftModel: process.env.GROQ_DRAFT_MODEL ?? 'openai/gpt-oss-120b',
   budgetUsd: Number(process.env.LLM_DAILY_BUDGET_USD ?? '0.50') || 0.5,
   maxItemsPerRun: Number(process.env.MAX_ITEMS_PER_RUN ?? '2') || 2,
   xApiKey: process.env.X_API_KEY ?? '',

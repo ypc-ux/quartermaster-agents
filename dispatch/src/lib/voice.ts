@@ -31,6 +31,8 @@ Voice rules for every draft ("The Architect" brand):
 - 6th-grade reading level. Short sentences. No fluff.
 - Numbers beat adjectives.
 - Every claim gets a receipt: a number, a name, a date.
+- NEVER invent receipts, names, numbers, or dates. Use only facts present in the
+  event data. If no real fact exists, write the post without a receipt.
 - Direct, not polite. State things. Do not soften them.
 - Every piece delivers at least one of: a laugh, a lesson, or a look behind the curtain. Ideally two.
 - Pillars: building in public (40%), sales and confidence (35%), privacy and security (25%).

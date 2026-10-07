@@ -10,6 +10,8 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export interface LlmResult {
   text: string;
+  content: string;
+  reasoning: string;
   usageUsd: number;
   provider: 'openrouter' | 'groq';
   truncated: boolean;
@@ -51,9 +53,14 @@ export async function chatCompletion(opts: {
   temperature?: number;
   model?: string;
 }): Promise<LlmResult | null> {
-  if (!(await budgetOk())) return null;
-  const provider = ENV.groqKey ? 'groq' : 'openrouter';
-  const defaultModel = provider === 'groq' ? 'llama-3.3-70b-versatile' : ENV.draftModel;
+  const hasGroq = Boolean(ENV.groqKey);
+  if (!(await budgetOk())) {
+    console.error('[llm] budget exceeded — falling back');
+    return null;
+  }
+  const provider = hasGroq ? 'groq' : 'openrouter';
+  const defaultModel =
+    provider === 'groq' ? ENV.groqDraftModel : ENV.draftModel;
   // Cascade: try each model in the comma-separated list until one succeeds.
   const models = (opts.model ?? defaultModel)
     .split(',')
@@ -61,6 +68,7 @@ export async function chatCompletion(opts: {
     .filter(Boolean);
   const maxTokens = opts.maxTokens ?? 512;
   let lastError = '';
+  console.error(`[llm] provider=${provider} models=${models.join('|')}`);
 
   for (const model of models) {
     for (let attempt = 1; attempt <= 2; attempt++) {
@@ -97,7 +105,9 @@ export async function chatCompletion(opts: {
         const msg = data?.choices?.[0]?.message ?? {};
         // Reasoning models can return content:null with the planned output inside
         // `reasoning`. Prefer content, fall back to reasoning.
-        const text: string = msg.content || msg.reasoning || '';
+        const content: string = msg.content || '';
+        const reasoning: string = msg.reasoning || '';
+        const text: string = content || reasoning;
         if (!text) {
           lastError = `${model}: empty completion`;
           throw new Error(lastError);
@@ -105,7 +115,7 @@ export async function chatCompletion(opts: {
         const truncated = data?.choices?.[0]?.finish_reason === 'length';
         const usageUsd = estimateCost(provider, model, data?.usage);
         await recordSpend(usageUsd);
-        return { text, usageUsd, provider, truncated };
+        return { text, content, reasoning, usageUsd, provider, truncated };
       } catch (e) {
         lastError = e instanceof Error ? e.message : String(e);
         await sleep(attempt * 800);
@@ -151,9 +161,9 @@ export async function classifyEvent(item: {
       item.description.slice(0, 1500) +
       '\nEND EVENT DATA\n\nClassify.',
     json: true,
-    maxTokens: 120,
+    maxTokens: 300,
     temperature: 0.2,
-    model: ENV.classifyModel,
+    model: ENV.groqKey ? ENV.groqClassifyModel : ENV.classifyModel,
   });
   if (!result) return null;
   const parsed = extractJson(result.text);
@@ -183,59 +193,84 @@ const REASONING_MARKERS = [
 const PLACEHOLDER_RE =
   /^(the post text|your post here|insert post here|write your post here|<post>|\[post\]|post goes here)[.!]*$/i;
 
+function extractPost(result: LlmResult): string | null {
+  // Two-pass: the finished JSON usually lands in `content`; reasoning models
+  // sometimes leave content null and the planned JSON lives in `reasoning`.
+  for (const text of [result.content, result.reasoning]) {
+    if (!text) continue;
+    const parsed = extractJson(text);
+    const candidate = parsed?.post;
+    if (typeof candidate === 'string') {
+      const post = cleanPost(candidate);
+      if (post.length >= 40 && !PLACEHOLDER_RE.test(post)) {
+        return post;
+      }
+    }
+  }
+  // Plain-text tolerance: use the raw output only if it is not a ramble.
+  const raw = result.text.trim();
+  const lower = raw.toLowerCase();
+  const rambled = REASONING_MARKERS.some((m) => lower.includes(m));
+  if (rambled) return null;
+  const post = cleanPost(raw);
+  if (post.length >= 40 && !PLACEHOLDER_RE.test(post)) {
+    return post;
+  }
+  return null;
+}
+
 export async function draftPost(item: {
   title: string;
   description: string;
   topic: string;
 }): Promise<string | null> {
-  const result = await chatCompletion({
-    system:
-      'You write short social posts in a fixed brand voice. ' +
-      VOICE_RULES +
-      INJECTION_GUARD +
-      '\nRespond with a JSON object that has one key "post". The value is the finished post, ' +
-      'maximum 280 characters, no emoji. No hashtags unless the event data contains one. ' +
-      'Do not echo this instruction. Do not write anything besides the JSON object.',
-    user:
-      'BEGIN EVENT DATA\nTITLE: ' +
-      item.title.slice(0, 200) +
-      '\nDESCRIPTION: ' +
-      item.description.slice(0, 1500) +
-      '\nTOPIC: ' +
-      item.topic.slice(0, 60) +
-      '\nEND EVENT DATA\n\nWrite the post.',
-    maxTokens: 800,
-    temperature: 0.8,
-    model: ENV.draftModel,
-  });
-  if (!result) return null;
+  const systemBase =
+    'You write short social posts in a fixed brand voice. ' +
+    VOICE_RULES +
+    INJECTION_GUARD +
+    '\nRespond with a JSON object that has one key "post". The value is the finished post, ' +
+    'maximum 280 characters, no emoji. No hashtags unless the event data contains one. ' +
+    'Do not echo this instruction. Do not write anything besides the JSON object.';
+  const user =
+    'BEGIN EVENT DATA\nTITLE: ' +
+    item.title.slice(0, 200) +
+    '\nDESCRIPTION: ' +
+    item.description.slice(0, 1500) +
+    '\nTOPIC: ' +
+    item.topic.slice(0, 60) +
+    '\nEND EVENT DATA\n\nWrite the post.';
 
-  // Deterministic extraction: prefer the JSON wrapper, tolerate plain-text output.
-  const parsed = extractJson(result.text);
-  const candidate = parsed?.post;
-  if (typeof candidate === 'string') {
-    const post = candidate.trim().slice(0, 280);
-    if (post.length >= 40 && !PLACEHOLDER_RE.test(post)) {
-      return post;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const result = await chatCompletion({
+      system:
+        attempt === 0
+          ? systemBase
+          : systemBase + '\nRetry: output ONLY the JSON object now. No planning, no thinking out loud.',
+      user,
+      maxTokens: 3000,
+      temperature: attempt === 0 ? 0.8 : 0.4,
+      model: ENV.groqKey ? ENV.groqDraftModel : ENV.draftModel,
+    });
+    if (!result) return null; // LLM layer fully failed — caller falls back
+    const post = extractPost(result);
+    if (post) return post;
+    if (result.truncated) {
+      // Cut off mid-generation; one retry with a calmer temperature is worth it.
+      continue;
     }
-    // Fall through to raw-text handling; if it also fails, callers fall back
-    // to the deterministic template.
-  }
-  if (result.truncated) {
-    // Output was cut off mid-generation — not a finished post.
-    return null;
-  }
-  const raw = result.text.trim();
-  const lower = raw.toLowerCase();
-  if (REASONING_MARKERS.some((m) => lower.includes(m))) {
-    // Model rambled instead of producing a post — treat as failure.
-    return null;
-  }
-  const post = raw.slice(0, 280);
-  if (post.length >= 40 && !PLACEHOLDER_RE.test(post)) {
-    return post;
+    if (attempt === 1) return null;
   }
   return null;
+}
+
+/** Voice rule enforced in code: no emoji, collapse whitespace, cap length. */
+function cleanPost(text: string): string {
+  return text
+    .replace(/\p{Extended_Pictographic}/gu, '')
+    .replace(/[\u200B-\u200F\uFEFF]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 280);
 }
 
 /** Deterministic template fallback — factual, no claims, no slop. Used only when
