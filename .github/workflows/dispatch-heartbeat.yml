@@ -1,13 +1,13 @@
 name: Dispatch heartbeat
 
-# Primary scheduler for the DISPATCH pipeline (Vercel Hobby only allows
+# Primary scheduler for the DISPATCH pipeline (Vercel Hobby allows only
 # once-per-day crons; GitHub Actions is free on public repos).
+# One cron, three stages; publish self-skips outside SOP-01 slots in-route.
 # Secrets live in repo secrets (ypc-ux/quartermaster-agents), never in code.
 
 on:
   schedule:
-    - cron: '*/15 * * * *'        # ingest + generate every 15 min
-    - cron: '0 8,12,17 * * 1-5'   # publish at SOP-01 slots (UTC)
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,3 +29,17 @@ jobs:
         env:
           DISPATCH_URL: https://dispatch-nine-murex.vercel.app
           CRON_SECRET: ${{ secrets.DISPATCH_CRON_SECRET }}
+      - name: Dead-man check
+        if: always()
+        run: |
+          STATUS=$(curl -s "${DISPATCH_URL}/api/status")
+          STALE=$(echo "$STATUS" | python3 -c "import json,sys; print(len(json.load(sys.stdin).get('stale_stages') or []))")
+          echo "stale stages: ${STALE}"
+          if [ "${STALE}" != "0" ]; then
+            curl -s -d "DISPATCH dead-man: ${STALE} stage(s) stale >6h. See ${DISPATCH_URL}/api/status" "ntfy.sh/${NTFY_TOPIC}" || true
+            exit 1
+          fi
+        env:
+          DISPATCH_URL: https://dispatch-nine-murex.vercel.app
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+

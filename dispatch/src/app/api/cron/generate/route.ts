@@ -9,6 +9,7 @@ import { classifyEvent, draftPost, fallbackTemplate } from '@/lib/llm';
 import { gateDraft } from '@/lib/humanizer';
 import { audit } from '@/lib/audit';
 import { notifyNewDraft } from '@/lib/notify';
+import { alert } from '@/lib/alert';
 import { djb2 } from '@/lib/ics';
 import { ENV } from '@/lib/env';
 
@@ -130,6 +131,7 @@ export async function GET(req: NextRequest): Promise<Response> {
           target: item.uid,
           detail: { draft: draftId ?? null, score: gate.score, fallback: usedFallback },
         });
+        await alert('DISPATCH: draft ready', `${item.title}\n${body.slice(0, 120)}`);
         if (draftId) {
           notified += (await notifyNewDraft({ title: item.title, body, draftId })) ? 1 : 0;
         }
@@ -157,6 +159,7 @@ export async function GET(req: NextRequest): Promise<Response> {
           target: item.uid,
           detail: { banned: gate.bannedHits, score: gate.score },
         });
+        await alert('DISPATCH: gate rejection', `${item.title} — ${gate.note || 'score too low'}`);
       }
     }
 

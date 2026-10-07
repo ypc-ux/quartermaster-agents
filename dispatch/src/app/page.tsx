@@ -3,6 +3,7 @@
 
 import { getSupabase } from '@/lib/supabase';
 import { engineMode } from '@/lib/guardrails';
+import { isOwner } from '@/lib/owner';
 import QueueActions, { QueueDraft } from '@/components/queue-actions';
 
 export const dynamic = 'force-dynamic';
@@ -133,6 +134,7 @@ function stageDot(state: StageState | undefined, waiting: boolean, mode: string)
 export default async function Page() {
   const d = await getData();
   const gen = d.stageLast.generate;
+  const owner = await isOwner();
 
   const stages: { name: string; sub: string; dot: string }[] = [
     { name: '① Ingest', sub: 'ICS → items', dot: stageDot(d.stageLast.ingest, false, d.mode) },
@@ -217,7 +219,7 @@ export default async function Page() {
         <h2>
           The Queue <span className="count">approve or reject</span>
         </h2>
-        <QueueActions mode={d.mode} drafts={d.pendingDrafts} />
+        <QueueActions mode={d.mode} drafts={d.pendingDrafts} owner={owner} />
       </section>
 
       <section>

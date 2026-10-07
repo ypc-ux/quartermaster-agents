@@ -241,6 +241,30 @@ h2 .count {
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 8px;
+  align-items: center;
+}
+.owner-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.owner-form {
+  display: flex;
+  gap: 8px;
+}
+.owner-input {
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--silver);
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 14px;
+  width: 220px;
+}
+.owner-input:focus {
+  outline: none;
+  border-color: var(--purple);
 }
 
 /* Proof / audit */

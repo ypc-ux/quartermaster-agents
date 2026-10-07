@@ -25,6 +25,9 @@ export const ENV = {
   xApiSecret: process.env.X_API_SECRET ?? '',
   xAccessToken: process.env.X_ACCESS_TOKEN ?? '',
   xAccessSecret: process.env.X_ACCESS_SECRET ?? '',
+  dispatchUrl: process.env.DISPATCH_URL ?? 'https://dispatch-nine-murex.vercel.app',
+  adminKey: process.env.ADMIN_KEY ?? '',
+  ntfyTopic: process.env.NTFY_TOPIC ?? '',
 } as const;
 
 export function isConfigured(): boolean {
